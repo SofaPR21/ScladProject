@@ -1,0 +1,77 @@
+﻿<Window x:Class="Склад_товаров.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вход в систему"
+        Height="480"
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F2F4F7">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0"
+                Background="#34495E">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <TextBlock Text="СКЛАД"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Система управления&#10;складом товаров"
+                           FontSize="17"
+                           Foreground="#DCE4EC"
+                           TextAlignment="Center"
+                           Margin="0,15,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <StackPanel Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Margin="55,20,55,20">
+
+            <TextBlock Text="Вход в систему"
+                       FontSize="27"
+                       FontWeight="SemiBold"
+                       Foreground="#2C3E50"
+                       Margin="0,0,0,30"/>
+
+            <TextBlock Text="Логин"
+                       FontSize="14"
+                       Foreground="#34495E"
+                       Margin="0,0,0,7"/>
+
+            <TextBox Height="38"
+                     FontSize="15"
+                     Padding="8"
+                     BorderBrush="#CBD2D9"
+                     Margin="0,0,0,20"/>
+
+            <TextBlock Text="Пароль"
+                       FontSize="14"
+                       Foreground="#34495E"
+                       Margin="0,0,0,7"/>
+
+            <PasswordBox Height="38"
+                         FontSize="15"
+                         Padding="8"
+                         BorderBrush="#CBD2D9"
+                         Margin="0,0,0,28"/>
+
+            <Button Content="Войти"
+                    Height="42"
+                    FontSize="16"
+                    Background="#34495E"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand" Click="OpenButton_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

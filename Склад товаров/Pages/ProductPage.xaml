@@ -1,0 +1,102 @@
+﻿<Page x:Class="Склад_товаров.Pages.ProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Товары"
+      Background="#F2F4F7">
+
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Товары"
+                       FontSize="25"
+                       FontWeight="SemiBold"
+                       Foreground="#34495E"/>
+
+            <TextBlock Text="Управление товарами на складе"
+                       FontSize="13"
+                       Foreground="Gray"
+                       Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Height="36"
+                     Width="300"
+                     HorizontalAlignment="Left"
+                     VerticalContentAlignment="Center"
+                     Padding="8"
+                     Text="Поиск товара..."/>
+
+            <Button Grid.Column="1"
+                    Content="Добавить товар"
+                    Background="#486581"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Padding="18,9"
+                    Cursor="Hand"/>
+        </Grid>
+
+        <ScrollViewer Grid.Row="2"
+                      VerticalScrollBarVisibility="Auto">
+            <ItemsControl>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="White"
+                                BorderBrush="#DCE2E9"
+                                BorderThickness="1"
+                                CornerRadius="6"
+                                Padding="15"
+                                Width="230"
+                                Height="190"
+                                Margin="0,0,15,15">
+                            <StackPanel>
+                                <TextBlock Text="Наименование товара"
+                                           FontSize="16"
+                                           FontWeight="SemiBold"
+                                           Foreground="#34495E"
+                                           TextWrapping="Wrap"/>
+
+                                <TextBlock Text="Артикул: —"
+                                           Foreground="Gray"
+                                           Margin="0,10,0,0"/>
+
+                                <TextBlock Text="Количество: —"
+                                           Foreground="Gray"
+                                           Margin="0,5,0,0"/>
+
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0,20,0,0">
+                                    <Button Content="Изменить"
+                                            Padding="8,5"
+                                            Margin="0,0,8,0"/>
+
+                                    <Button Content="Удалить"
+                                            Padding="8,5"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+                <ItemsControl.Items>
+                    <sys:String xmlns:sys="clr-namespace:System;assembly=mscorlib">Пример</sys:String>
+                </ItemsControl.Items>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Page>
